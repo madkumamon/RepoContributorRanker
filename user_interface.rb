@@ -4,20 +4,39 @@ require 'date'
 require 'terminal-table'
 require 'pry'
 require_relative 'github_scorecard'
+require_relative 'db_setup'
 
 # This class is responsible for the user interface and uses Command pattern
 
 class UserInterface
   def self.run(repository_url: nil, range: nil, points_values: nil)
+    # Run the migration. Temporary solution until rails API is implemented
+    Database.run_migration
+
     repository_name ||= ask_for_repository_url
     start_datetime, range_description = select_date_range(range)
     points_config = points_values || select_points_values
 
+    # Invoke the GitHubScorecard class to fetch and calculate the scores
     scorecard = GitHubScorecard.new(repository_name, start_datetime, points_config)
 
     scores = scorecard.calculate_scores
 
     display_table(repository_name, range_description, scores)
+
+    # Ask the user if they want to save the data
+    if ask_to_save_data
+      Database.save_scoreboard(repository_name, scores, points_config, range_description)
+      puts "Data saved successfully."
+    else
+      puts "Data not saved."
+    end
+  end
+
+  def self.ask_to_save_data
+    puts "Do you want to save the data? (yes/no)"
+    response = gets.chomp.downcase
+    response == 'yes' || response == 'y'
   end
 
   def self.ask_for_repository_url

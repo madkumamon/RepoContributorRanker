@@ -9,5 +9,7 @@ gem 'oj'
 gem 'faraday'
 gem 'faraday-retry'
 gem 'parallel'
+gem 'pg'
+gem 'json'
 gem 'rspec', '~> 3.0', group: :test
 gem 'pry', group: :development
