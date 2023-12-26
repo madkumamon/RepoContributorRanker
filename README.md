@@ -57,6 +57,17 @@ Install the required Ruby gems by running:
 bundle install
 ```
 
+### Step 4: Setup your own .ENV variables
+
+Install the required Ruby gems by running:
+
+```bash
+GITHUB_ACCESS_TOKEN='your_access_token'
+PG_DB_NAME='database_name'
+PG_DB_USER='database_user'
+PG_DB_PASSWORD='database_password'
+```
+
 ## Usage
 
 ### Running the Scorecard
