@@ -45,8 +45,8 @@ This application calculates and displays a GitHub repository's top contributors 
 Clone this repository to your local machine:
 
 ```bash
-git clone [REPOSITORY_URL]
-cd [REPOSITORY_DIRECTORY]
+gh repo clone madkumamon/RepoContributorRanker
+cd RepoContributorRanker
 ```
 
 ### Step 3: Install Required Gems
