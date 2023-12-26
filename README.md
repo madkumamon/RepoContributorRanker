@@ -1,4 +1,4 @@
-# RepoContributorRanker Application
+# RepoContributorRanker
 
 This application calculates and displays a GitHub repository's top contributors based on pull requests, comments, and reviews. It allows users to save the score data to a PostgreSQL database and export it to a CSV file.
 
@@ -9,12 +9,6 @@ This application calculates and displays a GitHub repository's top contributors 
 
 ## Installation
 
-<<<<<<< Updated upstream
-- Ruby is preferred.
-- Possibility to choose any org/repo you wish.
-- In-memory storage is perfectly fine, but we’d love to at least see a sketch of how you would design a schema around this problem and which storage technology you would choose, assuming that the team wants to store results long-term.
-- Maybe you can show us some unit testing skills for written business logic.
-=======
 ### Step 1: Install Ruby using `asdf` and `brew`
 
 1. **Install Homebrew**:
@@ -108,5 +102,4 @@ you may not use this file except in compliance with the License.
 
 ## Console Interface
 
->>>>>>> Stashed changes
 <img width="923" alt="image" src="https://github.com/madkumamon/RepoContributorRanker/assets/893147/0995f9ad-864c-401f-bfd8-62f6cb0d87a8">
