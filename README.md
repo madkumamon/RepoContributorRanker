@@ -70,6 +70,14 @@ PG_DB_PASSWORD='database_password'
 
 ## Usage
 
+### First Day Solution 
+
+The first day solution is a one file script without optimization, threads, databases and class and functionality separation. I leave it as it is for comparison purposes.
+
+```bash
+ruby RepoContributorRanker.rb
+```
+
 ### Running the Scorecard
 
 1. **Calculate and Display Scores**:
@@ -81,7 +89,11 @@ PG_DB_PASSWORD='database_password'
 
    Follow the prompts to enter the repository URL and other details.
 
-2. **Save Scores to Database**:
+2. **Default values**:
+   The default values when nothing was entered into prompts will be
+   `Last Week` and `12, 1, 3` for points.   
+
+3. **Save Scores to Database**:
    After displaying the scores, the application will ask if you want to save the data to the database. Enter `yes` to save.
 
 ### Exporting Data to CSV
