@@ -14,4 +14,7 @@ The development team wants to track who did the most work each week for bragging
 - Possibility to choose any org/repo you wish.
 - In-memory storage is perfectly fine, but we’d love to at least see a sketch of how you would design a schema around this problem and which storage technology you would choose, assuming that the team wants to store results long-term.
 - Maybe you can show us some unit testing skills for written business logic.
+
+## Rails Web Interface
+
 <img width="923" alt="image" src="https://github.com/madkumamon/RepoContributorRanker/assets/893147/0995f9ad-864c-401f-bfd8-62f6cb0d87a8">
